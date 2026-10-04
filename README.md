@@ -34,9 +34,9 @@ Constant alternatives had lower AICc (269.393). Therefore, the retained model is
 
 - data/: formal GBIF download, source records and the combined occurrence table with provenance and review notes.
 - results/: candidate-model evaluation tables and fold-level results.
-- figures/: working visualization outputs.
+- figures/: final map in PNG, PDF and TIFF, manuscript caption, and earlier working outputs.
 - supplementary/: prediction raster, response curves, evaluation plots, masked environmental layers, background shapefile and Wallace session object.
-- scripts/: plotting helper; it does not refit the model.
+- scripts/: R plotting helper and reproducible Python code for the final map, with dependency versions; these scripts do not refit the model.
 - CITATION.cff: repository citation metadata.
 - docs/PENDIENTES.md: final publication and release checks.
 
@@ -47,3 +47,9 @@ An evolving repository documenting the exploratory analysis is maintained at htt
 ## Rights and provenance
 
 GBIF records retain their source licences and attribution requirements. Newly reported occurrences require confirmation of voucher provenance, coordinate uncertainty, taxonomic review and permission for public redistribution before the repository is made public. The unpublished manuscript is not included.
+
+## Final map
+
+![Exploratory climatic suitability of Scytodes panamensis](figures/Scytodes_panamensis_map.png)
+
+See [formats, caption and reproduction instructions](figures/README.md). The improved figure preserves the original model predictions and distinguishes GBIF localities from new manuscript records.
