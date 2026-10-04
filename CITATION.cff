@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+title: "Reproducible exploratory climatic suitability analysis of Scytodes panamensis"
+message: "If you use the code, data processing, or derived outputs, please cite this repository and the GBIF download listed in the manuscript."
+type: software
+authors:
+  - family-names: Villarreal
+    given-names: Osvaldo
+  - family-names: Chamé-Vázquez
+    given-names: David
+  - family-names: Galvis
+    given-names: William
+  - family-names: Delgado-Santa
+    given-names: Leonardo
+  - family-names: Colmenares
+    given-names: Pío A.
+repository-code: "https://github.com/ldelgado-png/Scytodes-panamensis-SDM"
+url: "https://github.com/ldelgado-png/Scytodes-panamensis-SDM"
+date-released: 2026-10-04
+version: "0.1.0"
+keywords:
+  - Scytodes panamensis
+  - species distribution modelling
+  - Wallace
+  - Maxent
+  - GBIF
+  - Neotropics
+notes:
+  - "This repository documents an exploratory analysis and is not a validated occupancy or range-boundary model."
+  - "The GBIF component should additionally be cited using DOI 10.15468/dl.p33n36."
