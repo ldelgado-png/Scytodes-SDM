@@ -1,0 +1,14 @@
+Estado,Latitud,Longitud
+Guarico,10.0638,-66.4692
+Miranda,10.06396,-66.4663
+Falcón,10.9053,-68.768
+Aragua,10.3723,-67.4060
+Miranda,10.5012,-66.8111
+Guaquira_Yaracuy,10.2987,-68.6536
+Atlántico,10.76722,-75.04277
+Magdalena,11.15221,-74.14708
+Magdalena,11.15528,-74.14368
+Magdalena,11.16271,-74.15894
+Magdalena,11.126427,-74.091861
+Magdalena,11.2551,-73.64868
+Magdalena,11.24339,-73.80589
