@@ -1,0 +1,3 @@
+GBIF.org (2026). GBIF Occurrence Download. https://doi.org/10.15468/dl.r7a77w
+
+Este DOI corresponde a la descarga formal de los registros de Scytodes longipes utilizados en el análisis. Debe conservarse junto con la fecha de descarga y la atribución de los conjuntos de datos originales indicada por GBIF.

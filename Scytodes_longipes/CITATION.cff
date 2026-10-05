@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+title: "Scytodes longipes: modelo de distribución potencial en Colombia y Venezuela"
+message: "Si utiliza este repositorio, cite el repositorio y la descarga de GBIF indicada en el README."
+type: software
+authors:
+  - family-names: Delgado-Santa
+    given-names: Leonardo
+    affiliation: Universidad del Quindío
+    orcid: https://orcid.org/0000-0000-0000-0000
+date-released: 2026-10-05
+version: "1.0.0"
+repository-code: https://github.com/ldelgado-png/Scytodes-longipes-SDM
+keywords:
+  - Scytodes longipes
+  - species distribution modelling
+  - Maxent
+  - ENMeval
+  - Colombia
+  - Venezuela

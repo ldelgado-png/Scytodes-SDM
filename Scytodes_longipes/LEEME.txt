@@ -1,0 +1,49 @@
+Scytodes longipes: flujo de RStudio independiente de Wallace
+
+1. Descomprima todo el ZIP. Abra scripts/modelar_longipes.R en RStudio.
+2. Detenga Wallace si sigue abierto. Ejecute el script por secciones con Ctrl+Enter.
+3. Al aparecer el selector, elija la carpeta longipes_R, que contiene datos/ y scripts/.
+4. La primera descarga de WorldClim pesa unos 628 MB. Se conserva en clima/.
+5. El modelo se ajusta con 121 presencias mundiales y 10000 puntos de fondo
+   del CSV exportado por Wallace tras el muestreo exitoso. No se reutilizan
+   los puntos del antiguo rectangulo mundial ni el objeto background_final.
+6. METODO='block' usa 4 bloques geograficos; METODO='checkerboard' conserva
+   los dos grupos previamente exportados. Cada corrida tiene su subcarpeta.
+7. Se ajustan 40 combinaciones: L, LQ, H, LQH; RM 0.5 a 5 por pasos de 0.5.
+8. El GeoTIFF georreferenciado queda en resultados/block/. Los PNG/PDF/TIFF
+   de figura quedan en mapas/. El TIFF de figura no es el GeoTIFF analitico.
+
+Decisiones y limites:
+- Mantiene la depuracion previa: 193 coordenadas preliminares, exclusion de
+  incertidumbre declarada >5 km, remocion de celdas repetidas/NA y filtrado
+  espacial de 10 km. La procedencia completa se conserva en datos/.
+- Incertidumbre desconocida y revision taxonomica siguen pendientes.
+- El fondo es el muestreo exportado de buffers de 1 grado. No representa una
+  delimitacion biologica definitiva del area accesible. Evaluar sensibilidad.
+- Variables: BIO1, BIO4, BIO12 y BIO15, WorldClim 2.1, 1970-2000, 2.5 minutos.
+- El ajuste SWD evita cargar rasteres mundiales como tablas. AICc usa el fondo
+  y no todas las celdas; no comparar sus valores absolutos con AICc raster.
+- Se exporta correlacion del fondo y se avisa si |r|>=0.7; no se eliminan
+  variables automaticamente. Probar alternativas con criterio biologico.
+- La seleccion es provisional: omision media al umbral 10% <=0.10 y menor
+  AICc entre modelos no constantes. Si no se cumple, queda aviso explicito.
+- Los 4 bloques mejoran la separacion geografica respecto del checkerboard
+  fino, pero no prueban independencia ni transferibilidad por si solos.
+- AUC de validacion se calcula contra el fondo de cada grupo. No comparar
+  directamente con resultados que usen todo el fondo para la validacion.
+- La salida cloglog es idoneidad relativa, no probabilidad demostrada de presencia.
+- La proyeccion cubre Colombia y Venezuela segun Natural Earth 1:50m;
+  las costas/islas pequenas dependen de esa resolucion cartografica.
+- Extrapolacion: se entrega numero de variables fuera del rango del fondo;
+  no detecta combinaciones climaticas nuevas. Falta MESS/MOP para version final.
+- Mapa de la misma linea grafica que panamensis: viridis, tierra gris, mar azul
+  claro, Mercator y tipografia limpia. La escala es 0-1 (no se copia el rango
+  0.57-0.81 de panamensis). Se muestran solo las presencias retenidas.
+- Descarga GBIF longipes via API del 4 oct 2026: falta DOI formal de descarga.
+  No usar el DOI de panamensis para longipes.
+- Script preparado y revisado estructuralmente, no ejecutado de extremo a
+  extremo en R en este entorno. Adjunte errores completos y tablas obtenidas.
+
+Documentacion:
+https://jamiemkass.github.io/ENMeval/reference/ENMevaluate.html
+https://rspatial.github.io/terra/reference/predict.html
