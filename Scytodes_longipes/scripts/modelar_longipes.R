@@ -1,10 +1,10 @@
 # Scytodes longipes: calibracion mundial, proyeccion Colombia y Venezuela.
 # Datos GBIF: GBIF Occurrence Download, DOI 10.15468/dl.r7a77w.
 # Abrir este script en RStudio y ejecutar por secciones. No requiere Wallace.
-# Seleccionar la carpeta longipes_R descomprimida cuando se solicite.
+# Seleccionar la carpeta Scytodes_longipes cuando se solicite.
 
 # 1. CARPETA Y PAQUETES ----------------------------------------------------
-proyecto <- if (.Platform$OS.type == "windows") choose.dir(caption = "Seleccione longipes_R") else readline("Ruta de longipes_R: ")
+proyecto <- if (.Platform$OS.type == "windows") choose.dir(caption = "Seleccione Scytodes_longipes") else readline("Ruta de Scytodes_longipes: ")
 stopifnot(length(proyecto) == 1, !is.na(proyecto), dir.exists(proyecto))
 setwd(proyecto)
 stopifnot(file.exists("datos/particiones_wallace.csv"))

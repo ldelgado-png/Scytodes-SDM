@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-title: "Scytodes from Colombia and Venezuela: occurrence data and exploratory climatic suitability models"
+title: "Reproducible exploratory climatic suitability analysis of Scytodes panamensis"
 message: "If you use the code, data processing, or derived outputs, please cite this repository and the GBIF download listed in the manuscript."
 type: software
 authors:
@@ -15,11 +15,10 @@ authors:
     given-names: Pío A.
 repository-code: "https://github.com/ldelgado-png/Scytodes-panamensis-SDM"
 url: "https://github.com/ldelgado-png/Scytodes-panamensis-SDM"
-date-released: 2026-10-05
+date-released: 2026-10-04
 version: "0.1.0"
 keywords:
   - Scytodes panamensis
-  - Scytodes longipes
   - species distribution modelling
   - Wallace
   - Maxent
@@ -27,4 +26,4 @@ keywords:
   - Neotropics
 notes:
   - "This repository documents an exploratory analysis and is not a validated occupancy or range-boundary model."
-  - "Cite the GBIF downloads separately: panamensis 10.15468/dl.p33n36; longipes 10.15468/dl.r7a77w."
+  - "The GBIF component should additionally be cited using DOI 10.15468/dl.p33n36."

@@ -1,55 +1,42 @@
-# Scytodes panamensis SDM
+# Scytodes de Colombia y Venezuela: datos y modelos
 
-Reproducible exploratory climatic suitability modelling associated with the manuscript **Spitting spiders (Araneae: Scytodidae) in Colombia and Venezuela: new records and natural history notes**.
+Materiales complementarios del manuscrito **Spitting spiders (Araneae: Scytodidae) in Colombia and Venezuela: new records and natural history notes**.
 
-## Status
+El repositorio organiza los datos de GBIF, los nuevos registros aportados en el manuscrito, los análisis y la cartografía por especie. Los modelos climáticos son exploratorios y su validación muestra discriminación débil.
 
-The analytical package is assembled for manuscript review and supplementary-material preparation. The model remains explicitly exploratory: the retained nonconstant candidate has moderate discrimination, constant models have lower AICc, and the available records are few, geographically clustered and partly tentative. A final public release still requires author review of vouchers, coordinates, permissions and archive DOI.
+## Especies analizadas
 
-## Occurrence data
+| Especie | Materiales | Descarga GBIF | Modelo cartografiado | AUC de validación (media ± DE) |
+|---|---|---|---|---|
+| *Scytodes panamensis* | [Carpeta de la especie](Scytodes_panamensis/) | [10.15468/dl.p33n36](https://doi.org/10.15468/dl.p33n36) | LQ, RM 1.5 | 0.582 ± 0.152 |
+| *Scytodes longipes* | [Carpeta de la especie](Scytodes_longipes/) | [10.15468/dl.r7a77w](https://doi.org/10.15468/dl.r7a77w) | LQH, RM 0.5; provisional | 0.547 ± 0.091 |
 
-The analysis combines **13 new localities reported in the manuscript** (7 Colombia, 6 Venezuela) with **4 unique Panamanian localities from GBIF**. The formal GBIF download contains 9 records: 8 georeferenced records representing 4 sites and 1 record without coordinates.
+Las particiones de validación y regiones de calibración difieren entre especies; estos valores no constituyen una comparación controlada de desempeño.
 
-GBIF.org (2026). GBIF Occurrence Download. 4 October 2026. https://doi.org/10.15468/dl.p33n36
+## Organización
 
-The combined dataset contained 17 unique coordinate localities. Wallace removed 3 localities sharing environmental cells, leaving 14 occupied cells. Venezuelan specimens are tentatively assigned to the species in the manuscript; this uncertainty must remain explicit in interpretation.
+Cada carpeta contiene su propio README y las fuentes, código, evaluaciones y figuras. En *S. panamensis* se conservan los nombres `data/`, `scripts/`, `results/`, `figures/`, `supplementary/` y `docs/`, para mantener operativos los scripts existentes. En *S. longipes* se utilizan `datos/`, `scripts/`, `resultados/` y `figuras/`; el script genera sus mapas en `mapas/`.
 
-## Model configuration
+## Mapas
 
-- Wallace, Maxent through maxnet, evaluation with ENMeval.
-- WorldClim bioclimatic layers at 2.5 arc-minutes: BIO1, BIO12, BIO15.
-- Calibration region: minimum convex polygon plus a 1-degree buffer.
-- 10,000 random background points from 15,081 available terrestrial cells.
-- Nonspatial leave-one-out validation: 14 folds.
-- Features: L and LQ. Regularization multipliers: 0.5, 1, 1.5, 2, 3, 4 and 5 across the two runs.
-- Clamping enabled; continuous cloglog output.
+### Scytodes panamensis
 
-## Current findings
+![Mapa de Scytodes panamensis](Scytodes_panamensis/figures/Scytodes_panamensis_map.png)
 
-The retained **nonconstant** candidate is LQ with regularization multiplier 1.5: validation AUC 0.582 ± 0.152 (SD), training AUC 0.649, AICc 270.789, one nonzero coefficient, omission 0.143 at the 10th-percentile threshold and 0.071 at minimum training presence.
+### Scytodes longipes
 
-Constant alternatives had lower AICc (269.393). Therefore, the retained model is not the overall AICc winner, and predictive discrimination is weak. The map is a survey-prioritization hypothesis, not a validated range boundary, calibrated occurrence probability, occupancy estimate, corridor, or evidence of recent expansion.
+![Vista previa de Scytodes longipes](Scytodes_longipes/figuras/Scytodes_longipes_map_preview.png)
 
-## Contents
+Para *S. longipes* solo se dispone aquí de la vista previa recibida. Los originales de alta resolución y el raster de predicción quedan pendientes.
 
-- data/: formal GBIF download, source records and the combined occurrence table with provenance and review notes.
-- results/: candidate-model evaluation tables and fold-level results.
-- figures/: final map in PNG, PDF and TIFF, manuscript caption, and earlier working outputs.
-- supplementary/: prediction raster, response curves, evaluation plots, masked environmental layers, background shapefile and Wallace session object.
-- scripts/: R plotting helper and reproducible Python code for the final map, with dependency versions; these scripts do not refit the model.
-- CITATION.cff: repository citation metadata.
-- docs/PENDIENTES.md: final publication and release checks.
+## Reproducción y citas
 
-## Manuscript availability statement
+Consulte las instrucciones de cada especie. Los DOI de GBIF identifican descargas de ocurrencias y deben citarse por separado del repositorio. Este repositorio todavía no tiene un DOI de archivo ni un lanzamiento estable. El nombre y la URL existentes se conservan para mantener los enlaces utilizados en el manuscrito.
 
-An evolving repository documenting the exploratory analysis is maintained at https://github.com/ldelgado-png/Scytodes-panamensis-SDM. Before publication, the authors should create a stable public release, archive that release in a repository that assigns a DOI, and replace the placeholders in the manuscript with the exact release tag, DOI and citation.
+## Pendientes del manuscrito
 
-## Rights and provenance
-
-GBIF records retain their source licences and attribution requirements. Newly reported occurrences require confirmation of voucher provenance, coordinate uncertainty, taxonomic review and permission for public redistribution before the repository is made public. The unpublished manuscript is not included.
-
-## Final map
-
-![Exploratory climatic suitability of Scytodes panamensis](figures/Scytodes_panamensis_map.png)
-
-See [formats, caption and reproduction instructions](figures/README.md). The improved figure preserves the original model predictions and distinguishes GBIF localities from new manuscript records.
+- Integrar el análisis de *S. longipes* en métodos, resultados y discusión.
+- Incorporar las exportaciones originales del mapa y de la predicción de *S. longipes*.
+- Verificar que los registros de la descarga formal de GBIF coincidan con los utilizados inicialmente mediante la API.
+- Revisar taxonomía, vouchers y coordenadas; documentar el criterio de selección provisional de modelos.
+- Crear un lanzamiento estable y archivarlo con DOI antes de la versión editorial definitiva.

@@ -22,14 +22,14 @@ La descarga debe citarse junto con la fecha de consulta indicada por GBIF. Los r
 
 ## Resultado actual
 
-La salida cartográfica incluida en el manuscrito es exploratoria. El modelo mostrado corresponde a FC = LQH y RM = 0.5, con AUC media de validación de 0.547 ± 0.091. El modelo con menor AICc fue LQH–2.0, pero su AUC de validación fue 0.463; por ello, la selección debe reportarse explícitamente como una decisión exploratoria basada en el compromiso entre discriminación, complejidad y omisión.
+La salida cartográfica generada es exploratoria; su integración al manuscrito está pendiente. El modelo mostrado corresponde a FC = LQH y RM = 0.5, con AUC media de validación de 0.547 ± 0.091. El modelo con menor AICc fue LQH–2.0, pero su AUC de validación fue 0.463; El script eligió LQH–0.5 por la menor omisión al percentil 10 entre los candidatos, al no haber ninguno con omisión media ≤ 0.10. Esta selección provisional debe distinguirse del mínimo AICc y de la mayor AUC de validación (H–0.5: 0.553 ± 0.089).
 
 Los resultados no deben interpretarse como una delimitación definitiva del área de distribución ni como probabilidades de presencia calibradas.
 
 ## Reproducción
 
 1. Abrir `scripts/modelar_longipes.R` en RStudio.
-2. Establecer como directorio de trabajo la carpeta raíz del repositorio.
+2. Seleccionar la carpeta `Scytodes_longipes/` cuando el script solicite el directorio del proyecto.
 3. Ejecutar el script por secciones.
 4. El script descarga WorldClim, extrae los valores ambientales, evalúa 40 configuraciones, selecciona un modelo y genera el raster y el mapa final.
 
@@ -38,12 +38,18 @@ Los resultados no deben interpretarse como una delimitación definitiva del áre
 - `scripts/`: código reproducible en R.
 - `datos/`: ocurrencias, particiones y procedencia.
 - `resultados/`: tablas de evaluación y predicciones generadas al ejecutar el script.
-- `figuras/`: mapas finales en PNG, PDF y TIFF.
+- `figuras/`: vista previa del mapa recibido; los archivos originales de alta resolución y el GeoTIFF de predicción están pendientes de incorporación. El script genera PNG, PDF y TIFF en `mapas/`.
 
 ## Cita del repositorio
 
-Delgado-Santa, L. 2026. *Scytodes longipes: modelo de distribución potencial en Colombia y Venezuela*. Repositorio de análisis reproducible. GitHub. https://github.com/ldelgado-png/Scytodes-longipes-SDM
+Delgado-Santa, L. 2026. *Scytodes longipes: modelo de distribución potencial en Colombia y Venezuela*. Repositorio de análisis reproducible. GitHub. https://github.com/ldelgado-png/Scytodes-panamensis-SDM/tree/main/Scytodes_longipes
 
 ## Licencias y procedencia
 
 Los registros de GBIF conservan las licencias y atribuciones de sus conjuntos de datos originales. Los registros nuevos deben citarse de acuerdo con el manuscrito y la información de sus vouchers. El DOI de GBIF identifica la descarga de ocurrencias; el repositorio documenta el procesamiento y modelado.
+
+## Vista previa del mapa
+
+![Mapa exploratorio de Scytodes longipes](figuras/Scytodes_longipes_map_preview.png)
+
+La vista previa recibida mide 663 × 597 píxeles. Se conserva como referencia visual, pendiente del archivo exportado original para publicación.
