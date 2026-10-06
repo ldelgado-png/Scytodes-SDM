@@ -1,0 +1,21 @@
+Estado,Latitud,Longitud
+S_fusca,10.4348,-66.7780
+Cundinamarca,4.663,-74.093
+Cundinamarca,4.663,-74.093
+Tolima,4.148,-74.886
+Distrito Capital,10.48801,-66.87919
+Sucre,10.45397,-64.18256
+Cauca,2.964,-78.174
+Cundinamarca,4.766,-74.463
+Cundinamarca,4.185,-74.480
+Cundinamarca,4.185,-74.480
+Cundinamarca,4.185,-74.480
+Magdalena,11.06377,-74.08938
+Magdalena,11.2551,-73.64868
+Quindío,4.5388889,-75.6725
+Risaralda,5.350,-76.128
+Aragua,10.3888,-67.7461
+Aragua,10.273,-67.611
+Amazonas,4.2716,-67.7872
+Amazonas,2.61458,-66.2955
+Falcón,11.9026,-69.9456

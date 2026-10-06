@@ -1,0 +1,17 @@
+# Concordancia entre configuraciones: métricas por celda, no ponderadas por área.
+r_LQ <- terra::rast(file.path(salida,"Scytodes_fusca_CO_VE_cloglog.tif"))
+r_LQH <- terra::rast(file.path(salida,"alternativa_LQH_rm1","Scytodes_fusca_CO_VE_cloglog.tif"))
+terra::compareGeom(r_LQ,r_LQH,crs=TRUE,ext=TRUE,rowcol=TRUE,res=TRUE,stopOnError=TRUE)
+d <- file.path(salida,"comparacion_modelos");dir.create(d,recursive=TRUE,showWarnings=FALSE)
+v <- terra::values(c(r_LQ,r_LQH),mat=TRUE)
+v <- v[rowSums(!is.finite(v))==0,,drop=FALSE]
+x <- v[,1];y <- v[,2];stopifnot(length(x)>1)
+resumen <- data.frame(celdas_comparadas=length(x),Pearson=cor(x,y),Spearman=cor(x,y,method="spearman"),diferencia_media_LQH_menos_LQ=mean(y-x),diferencia_absoluta_media=mean(abs(y-x)),RMSE_entre_predicciones=sqrt(mean((y-x)^2)),diferencia_absoluta_maxima=max(abs(y-x)))
+write.csv(resumen,file.path(d,"concordancia_modelos.csv"),row.names=FALSE);print(resumen)
+diferencia <- terra::writeRaster(r_LQH-r_LQ,file.path(d,"diferencia_LQH_menos_LQ.tif"),overwrite=TRUE,wopt=list(datatype="FLT4S",gdal="COMPRESS=LZW"))
+png(file.path(d,"comparacion_Scytodes_fusca.png"),width=4200,height=1800,res=300)
+par(mfrow=c(1,3),mar=c(3,3,3,5))
+terra::plot(r_LQ,col=hcl.colors(100,"viridis"),range=c(0,1),main="LQ | RM 4.5")
+terra::plot(r_LQH,col=hcl.colors(100,"viridis"),range=c(0,1),main="LQH | RM 1")
+terra::plot(diferencia,col=colorRampPalette(c("#2166ac","white","#b2182b"))(101),range=c(-1,1),main="Diferencia: LQH - LQ")
+dev.off()

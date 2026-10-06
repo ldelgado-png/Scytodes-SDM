@@ -1,0 +1,23 @@
+{
+  "usageKey": 5169044,
+  "scientificName": "Scytodes fusca Walckenaer, 1837",
+  "canonicalName": "Scytodes fusca",
+  "rank": "SPECIES",
+  "status": "ACCEPTED",
+  "confidence": 99,
+  "matchType": "EXACT",
+  "kingdom": "Animalia",
+  "phylum": "Arthropoda",
+  "order": "Araneae",
+  "family": "Scytodidae",
+  "genus": "Scytodes",
+  "species": "Scytodes fusca",
+  "kingdomKey": 1,
+  "phylumKey": 54,
+  "classKey": 367,
+  "orderKey": 1496,
+  "familyKey": 9573,
+  "genusKey": 2143320,
+  "speciesKey": 5169044,
+  "class": "Arachnida"
+}

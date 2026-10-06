@@ -13,13 +13,14 @@ authors:
     given-names: Leonardo
   - family-names: Colmenares
     given-names: Pío A.
-repository-code: "https://github.com/ldelgado-png/Scytodes-panamensis-SDM"
-url: "https://github.com/ldelgado-png/Scytodes-panamensis-SDM"
+repository-code: "https://github.com/ldelgado-png/Scytodes-SDM"
+url: "https://github.com/ldelgado-png/Scytodes-SDM"
 date-released: 2026-10-05
 version: "0.1.0"
 keywords:
   - Scytodes panamensis
   - Scytodes longipes
+  - Scytodes fusca
   - species distribution modelling
   - Wallace
   - Maxent
@@ -27,4 +28,4 @@ keywords:
   - Neotropics
 notes:
   - "This repository documents an exploratory analysis and is not a validated occupancy or range-boundary model."
-  - "Cite the GBIF downloads separately: panamensis 10.15468/dl.p33n36; longipes 10.15468/dl.r7a77w."
+  - "Cite the GBIF downloads separately: panamensis 10.15468/dl.p33n36; longipes 10.15468/dl.r7a77w; fusca 10.15468/dl.m67db8 (API equivalence unverified)."

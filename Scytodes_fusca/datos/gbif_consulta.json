@@ -1,0 +1,13 @@
+{
+  "retrieved_utc": "2026-10-06T04:24:30.776483+00:00",
+  "endpoint": "https://api.gbif.org/v1/occurrence/search",
+  "parameters": {
+    "taxonKey": 5169044,
+    "hasCoordinate": true,
+    "occurrenceStatus": "PRESENT"
+  },
+  "records": 1479,
+  "reported_count": 1479,
+  "endOfRecords": true,
+  "note": "Consulta API sin DOI de descarga. Solicitar descarga formal con el mismo filtro y conciliar identificadores antes de citar en el manuscrito."
+}

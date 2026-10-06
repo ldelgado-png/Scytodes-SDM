@@ -10,6 +10,7 @@ El repositorio organiza los datos de GBIF, los nuevos registros aportados en el 
 |---|---|---|---|---|
 | *Scytodes panamensis* | [Carpeta de la especie](Scytodes_panamensis/) | [10.15468/dl.p33n36](https://doi.org/10.15468/dl.p33n36) | LQ, RM 1.5 | 0.582 ± 0.152 |
 | *Scytodes longipes* | [Carpeta de la especie](Scytodes_longipes/) | [10.15468/dl.r7a77w](https://doi.org/10.15468/dl.r7a77w) | LQH, RM 0.5; provisional | 0.547 ± 0.091 |
+| *Scytodes fusca* | [Carpeta de la especie](Scytodes_fusca/) | [10.15468/dl.m67db8](https://doi.org/10.15468/dl.m67db8) | LQ RM4.5 y LQH RM1; exploratorios con inconsistencia geográfica retenida | 0.535 ± 0.067 / 0.597 ± 0.046 |
 
 Las particiones de validación y regiones de calibración difieren entre especies; estos valores no constituyen una comparación controlada de desempeño.
 
@@ -31,7 +32,7 @@ Para *S. longipes* solo se dispone aquí de la vista previa recibida. Los origin
 
 ## Reproducción y citas
 
-Consulte las instrucciones de cada especie. Los DOI de GBIF identifican descargas de ocurrencias y deben citarse por separado del repositorio. Este repositorio todavía no tiene un DOI de archivo ni un lanzamiento estable. El nombre y la URL existentes se conservan para mantener los enlaces utilizados en el manuscrito.
+Consulte las instrucciones de cada especie. Los DOI de GBIF identifican descargas de ocurrencias y deben citarse por separado del repositorio. Este repositorio todavía no tiene un DOI de archivo ni un lanzamiento estable. URL pública actual: https://github.com/ldelgado-png/Scytodes-SDM; el enlace antiguo redirige al repositorio renombrado.
 
 ## Pendientes del manuscrito
 
@@ -40,3 +41,9 @@ Consulte las instrucciones de cada especie. Los DOI de GBIF identifican descarga
 - Verificar que los registros de la descarga formal de GBIF coincidan con los utilizados inicialmente mediante la API.
 - Revisar taxonomía, vouchers y coordenadas; documentar el criterio de selección provisional de modelos.
 - Crear un lanzamiento estable y archivarlo con DOI antes de la versión editorial definitiva.
+
+## Scytodes fusca: corrida conservada
+
+![Mapa alternativo de Scytodes fusca](Scytodes_fusca/mapas/Scytodes_fusca_block_LQH_rm1.png)
+
+La corrida conserva un registro con coordenadas incompatibles con el país declarado; no fue reajustada. Véanse las [limitaciones](Scytodes_fusca/docs/LIMITACIONES.md), la [comparación de mapas](Scytodes_fusca/mapas/comparacion_Scytodes_fusca.png) y el [texto para el manuscrito](Scytodes_fusca/docs/texto_manuscrito.md). La equivalencia del DOI con la instantánea API sigue pendiente.
