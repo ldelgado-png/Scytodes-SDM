@@ -34,16 +34,7 @@ Para *S. longipes* solo se dispone aquí de la vista previa recibida. Los origin
 
 Consulte las instrucciones de cada especie. Los DOI de GBIF identifican descargas de ocurrencias y deben citarse por separado del repositorio. Este repositorio todavía no tiene un DOI de archivo ni un lanzamiento estable. URL pública actual: https://github.com/ldelgado-png/Scytodes-SDM; el enlace antiguo redirige al repositorio renombrado.
 
-## Pendientes del manuscrito
-
-- Integrar el análisis de *S. longipes* en métodos, resultados y discusión.
-- Incorporar las exportaciones originales del mapa y de la predicción de *S. longipes*.
-- Verificar que los registros de la descarga formal de GBIF coincidan con los utilizados inicialmente mediante la API.
-- Revisar taxonomía, vouchers y coordenadas; documentar el criterio de selección provisional de modelos.
-- Crear un lanzamiento estable y archivarlo con DOI antes de la versión editorial definitiva.
-
 ## Scytodes fusca: corrida conservada
 
 ![Mapa alternativo de Scytodes fusca](Scytodes_fusca/mapas/Scytodes_fusca_block_LQH_rm1.png)
 
-La corrida conserva un registro con coordenadas incompatibles con el país declarado; no fue reajustada. Véanse las [limitaciones](Scytodes_fusca/docs/LIMITACIONES.md), la [comparación de mapas](Scytodes_fusca/mapas/comparacion_Scytodes_fusca.png) y el [texto para el manuscrito](Scytodes_fusca/docs/texto_manuscrito.md). La equivalencia del DOI con la instantánea API sigue pendiente.
