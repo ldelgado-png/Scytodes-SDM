@@ -2,9 +2,9 @@
 
 Reproducible exploratory climatic suitability modelling associated with the manuscript **Spitting spiders (Araneae: Scytodidae) in Colombia and Venezuela: new records and natural history notes**.
 
-## Status
+## Scope
 
-The analytical package is assembled for manuscript review and supplementary-material preparation. The model remains explicitly exploratory: the retained nonconstant candidate has moderate discrimination, constant models have lower AICc, and the available records are few, geographically clustered and partly tentative. A final public release still requires author review of vouchers, coordinates, permissions and archive DOI.
+This package documents the exploratory climatic suitability analysis accompanying the manuscript, with occurrence provenance, model settings, evaluation tables and cartographic outputs.
 
 ## Occurrence data
 
@@ -12,7 +12,7 @@ The analysis combines **13 new localities reported in the manuscript** (7 Colomb
 
 GBIF.org (2026). GBIF Occurrence Download. 4 October 2026. https://doi.org/10.15468/dl.p33n36
 
-The combined dataset contained 17 unique coordinate localities. Wallace removed 3 localities sharing environmental cells, leaving 14 occupied cells. Venezuelan specimens are tentatively assigned to the species in the manuscript; this uncertainty must remain explicit in interpretation.
+The combined dataset contained 17 unique coordinate localities. Wallace removed 3 localities sharing environmental cells, leaving 14 occupied cells. Venezuelan specimens follow the tentative taxonomic assignment documented in the manuscript.
 
 ## Model configuration
 
@@ -28,7 +28,7 @@ The combined dataset contained 17 unique coordinate localities. Wallace removed 
 
 The retained **nonconstant** candidate is LQ with regularization multiplier 1.5: validation AUC 0.582 ± 0.152 (SD), training AUC 0.649, AICc 270.789, one nonzero coefficient, omission 0.143 at the 10th-percentile threshold and 0.071 at minimum training presence.
 
-Constant alternatives had lower AICc (269.393). Therefore, the retained model is not the overall AICc winner, and predictive discrimination is weak. The map is a survey-prioritization hypothesis, not a validated range boundary, calibrated occurrence probability, occupancy estimate, corridor, or evidence of recent expansion.
+The evaluation also includes constant alternatives with AICc 269.393. The mapped candidate depicts spatial variation in exploratory climatic suitability and provides hypotheses for future field surveys; the evaluation tables document the model-selection context.
 
 ## Contents
 
@@ -38,15 +38,15 @@ Constant alternatives had lower AICc (269.393). Therefore, the retained model is
 - supplementary/: prediction raster, response curves, evaluation plots, masked environmental layers, background shapefile and Wallace session object.
 - scripts/: R plotting helper and reproducible Python code for the final map, with dependency versions; these scripts do not refit the model.
 - CITATION.cff: repository citation metadata.
-- docs/PENDIENTES.md: final publication and release checks.
+- docs/: supporting documentation.
 
 ## Manuscript availability statement
 
-An evolving repository documenting the exploratory analysis is maintained at https://github.com/ldelgado-png/Scytodes-panamensis-SDM. Before publication, the authors should create a stable public release, archive that release in a repository that assigns a DOI, and replace the placeholders in the manuscript with the exact release tag, DOI and citation.
+Occurrence data, modelling documentation, evaluation tables and maps supporting this exploratory analysis are publicly available at https://github.com/ldelgado-png/Scytodes-SDM/tree/main/Scytodes_panamensis.
 
 ## Rights and provenance
 
-GBIF records retain their source licences and attribution requirements. Newly reported occurrences require confirmation of voucher provenance, coordinate uncertainty, taxonomic review and permission for public redistribution before the repository is made public. The unpublished manuscript is not included.
+GBIF records retain their source licences and attribution requirements. New occurrences are attributed to the manuscript and documented in the provenance tables.
 
 ## Final map
 
